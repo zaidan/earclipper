@@ -1,0 +1,52 @@
+name: earclipper
+version: '0.0.0.1'
+license: MIT
+license-file: LICENSE
+maintainer: firas@zaidan.de
+stability: stable
+github: zaidan/earclipper
+synopsis: Ear Clipping Triangulation
+description: >
+    A library and command line tool to triangulate polygons
+    with an ear clipping algorithm.
+category: Graphics
+author:
+  - Firas Zaidan
+extra-source-files:
+  - README.md
+
+ghc-options: -Wall
+
+default-extensions:
+  - BangPatterns
+  - DeriveFunctor
+  - FlexibleContexts
+  - LambdaCase
+  - OverloadedStrings
+  - RecordWildCards
+  - ScopedTypeVariables
+  - ViewPatterns
+
+dependencies:
+  - base       >= 4.9 && < 5.0
+
+library:
+  source-dirs: src
+  dependencies: []
+
+executables:
+  earclipper:
+    main: Main.hs
+    source-dirs: app
+    dependencies:
+      - earclipper
+    ghc-options: -Wall -threaded -rtsopts -with-rtsopts=-N
+
+tests:
+  spec:
+    main: Spec.hs
+    source-dirs: test
+    dependencies:
+      - earclipper
+      - hspec
+      - filepath
