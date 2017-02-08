@@ -14,14 +14,25 @@ tmtags
 *.sw[op]
 
 ## PROJECT::GENERAL
+dist
+dist-*
+cabal-dev
 *.o
 *.hi
-*.sw*
-sos
-sos.*
-dist/**
-.cabal-sandbox
+*.chi
+*.chs.h
+*.dyn_o
+*.dyn_hi
+.hpc
+.hsenv
+.cabal-sandbox/
 cabal.sandbox.config
-.stack-work
+*.prof
+*.aux
+*.hp
+*.eventlog
+.stack-work/
+cabal.project.local
+.HTF/
 
 ## PROJECT::SPECIFIC
