@@ -9,7 +9,7 @@ fixturePath = "test" </> "fixtures"
 
 spec :: Spec
 spec =
-  describe "triangulateString" $
+  describe "triangulateString" .
     it "triangulates polygon" $ do
       polygon <- readFile $ fixturePath </> "polygon.txt"
       expected <- readFile $ fixturePath </> "result.txt"
